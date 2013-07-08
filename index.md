@@ -20,7 +20,7 @@ Stormについてある程度わかっていることを前提としています
 
 尚、このページはStormの背景や概要、全体像を示すことを目的としていません。  
 そのため、Stormについて背景や概要から全体像を知りたい方は下記のページを参照してください。  
-* [StormProjectのメインページ（英語）](http://storm-project.net/)
+* [StormProjectのメインページ（英語）](http://storm-project.net/)  
 * [StormProjectの日本語訳ページ](http://stormjp.github.com/storm-website-jp/)
 
 ## Stormを利用する際の環境
