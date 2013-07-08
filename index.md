@@ -55,19 +55,19 @@ Stormについてある程度わかっていることを前提としています
 * [StormProjectの日本語訳ページ](http://stormjp.github.com/storm-website-jp/) 日本語で全体的に知りたい場合、このページを確認してください。
 
 ### 参考資料
-* [Twitterのリアルタイム分散処理システム「Storm」入門](http://www.slideshare.net/AdvancedTechNight/twitterstorm)
+* [Twitterのリアルタイム分散処理システム「Storm」入門](http://www.slideshare.net/AdvancedTechNight/twitterstorm)  
 日本語で「Stormとは何か？」がコンパクトにまとまった資料です。本家サイトの前にまずこの資料を見るとわかりやすいです。
 
-* [Stormの注目の新機能TridentAPI](http://www.slideshare.net/AdvancedTechNight/stormtridentapi)
+* [Stormの注目の新機能TridentAPI](http://www.slideshare.net/AdvancedTechNight/stormtridentapi)  
 Stormで「演算」を記述する際に簡易に開発が可能なTridentAPIの紹介資料。
 
 ### 参考書籍
-* [Getting Started with Storm](http://shop.oreilly.com/product/0636920024835.do)
+* [Getting Started with Storm](http://shop.oreilly.com/product/0636920024835.do)  
 Stormの薄い本。Storm-Projectページにのっていること以上のことが書かれていないうえバージョンも古い。  
 そのためお勧めできません。  
 ただ、サンプルとして書かれているアプリケーションについては面白いです。
 
-* [Stormをはじめよう](http://www.oreilly.co.jp/books/9784873116013/)
+* [Stormをはじめよう](http://www.oreilly.co.jp/books/9784873116013/)  
 「Getting Started with Storm」の日本語訳版。  
 やはりバージョンは古いのですが、日本語なので日本語で全体的に知りたい場合有効です。
 
