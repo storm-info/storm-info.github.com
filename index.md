@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Top page
 ---
 
@@ -23,7 +23,7 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 [StormProjectの日本語訳ページ](http://stormjp.github.com/storm-website-jp/)
 
 ## Stormを利用する際の環境
-* [開発環境]
+* [開発環境](/environment/develop.html)
 * [クラスタ環境]
 
 ## StormのAPIの説明
@@ -31,11 +31,10 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 * [SpoutBoltで使用できるAPI]
 
 ## Stormの内部動作
-* [Stormクラスタの内部動作]
-* [Nimbusの内部動作]
-* [Supervisorの内部動作]
-* [UIの内部動作]
-* [Workerの内部動作]
+* [Nimbus起動時の動作]
+* [TopologySubmit時の動作]
+* [Supervisor起動時の動作]
+* [ヘルスチェックの動作]
 
 ## Stormを利用する際に気をつけること
 * [環境周りの注意点]
