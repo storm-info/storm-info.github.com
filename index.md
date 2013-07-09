@@ -24,7 +24,7 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 
 ## Stormを利用する際の環境
 * [開発環境](/environment/develop.html)
-* [クラスタ環境]
+* [クラスタ環境](/environment/cluster.html)
 
 ## StormのAPIの説明
 * [共通的なAPI]
