@@ -11,13 +11,13 @@ title: クラスタ環境
 
 ### ZeroMQ、JZMQがJavaから参照できない状況では動作しない
 仮にZeroMQ、JZMQがインストールしてあっても、Javaから参照できない状態の場合Workerプロセス起動時に下記のようなエラーが発生し、動作しません。  
-```
-java.lang.UnsatisfiedLinkError: no jzmq in java.library.path  
-        at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1738)  
-        at java.lang.Runtime.loadLibrary0(Runtime.java:823)  
-        at java.lang.System.loadLibrary(System.java:1028)  
-        at org.zeromq.ZMQ.<clinit>(ZMQ.java:34)  
-```
+
+    java.lang.UnsatisfiedLinkError: no jzmq in java.library.path  
+            at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1738)  
+            at java.lang.Runtime.loadLibrary0(Runtime.java:823)  
+            at java.lang.System.loadLibrary(System.java:1028)  
+            at org.zeromq.ZMQ.<clinit>(ZMQ.java:34)  
+
 
 ### ZeroMQ、JZMQの最新版を導入した場合動作しない
 * ZeroMQ、JZMQはバージョンごとに内部動作やAPIの差分がある。そのため、Stormのページに書かれたバージョンを使用する必要があります。
