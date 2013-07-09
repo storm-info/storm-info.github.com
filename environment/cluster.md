@@ -31,7 +31,7 @@ title: クラスタ環境
       at backtype.storm.daemon.worker $fn__3066$exec_fn__858__auto____3067$this__3077$iter__3080__3084$fn__3085.invoke(worker.clj: 137)
       at clojure.lang.LazySeq.sval(LazySeq.java:42)
 
-また、32bitと64bitでインストールするものを誤ると下記のようなエラーが発生します。  
+* 32bitと64bitでインストールするものを誤った場合のエラー
 
     java.lang.UnsatisfiedLinkError: /usr/lib/libjzmq.so.0.0.0: /usr/lib/libjzmq.so.0.0.0: wrong ELF class: ELFCLASS32 (Possible cause: architecture word width mismatch)
       at java.lang.ClassLoader$NativeLibrary.load(Native Method)
@@ -45,7 +45,7 @@ title: クラスタ環境
       at backtype.storm.messaging.zmq$loading__4784__auto__.invoke(zmq.clj:1)
       at backtype.storm.messaging.zmq__init.load(Unknown Source)
       at backtype.storm.messaging.zmq__init.<clinit>(Unknown Source)
-       // （省略）
+      // （省略）
 
 ### Nimbus、Supervisor、workerは各々ローカルに一時ファイルを出力する
 Stormの構成プロセスであるNimbus、Supervisor、workerは環境変数「STORM_HOME」配下に一時ファイルを出力します。  
