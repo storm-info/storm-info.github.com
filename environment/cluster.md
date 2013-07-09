@@ -31,8 +31,9 @@ org.zeromq.ZMQException: Invalid argument(0x16)
         at backtype.storm.messaging.zmq.ZMQContext.connect(zmq.clj:33)  
         at backtype.storm.daemon.worker $fn__3066$exec_fn__858__auto____3067$this__3077$iter__3080__3084$fn__3085.invoke(worker.clj: 137)  
         at clojure.lang.LazySeq.sval(LazySeq.java:42)  
-```
-また、32bitと64bitでインストールするものを誤ると下記のようなエラーが発生します。
+```  
+また、32bitと64bitでインストールするものを誤ると下記のようなエラーが発生します。  
+
 ```
 java.lang.UnsatisfiedLinkError: /usr/lib/libjzmq.so.0.0.0: /usr/lib/libjzmq.so.0.0.0: wrong ELF class: ELFCLASS32 (Possible cause: architecture word width mismatch)  
         at java.lang.ClassLoader$NativeLibrary.load(Native Method)  
