@@ -27,8 +27,7 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 * [クラスタ環境](/environment/cluster.html)
 
 ## StormのAPIの説明
-* [共通的なAPI]
-* [SpoutBoltで使用できるAPI]
+* [SpoutBoltで使用できるAPI](/api/spoutboltapi.html)
 
 ## Stormの内部動作
 * [Nimbus起動時の動作]
