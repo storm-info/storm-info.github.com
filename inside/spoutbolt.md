@@ -6,10 +6,6 @@ title: Spout/Boltの動作
 このページではWorkerプロセス中のSpout/Boltの動作についてまとめています。
 
 ### Spout/Boltで例外が発生してcatchされなかった場合はWorkerプロセスごとフェールオーバーする
-SupervisorプロセスがWorkerプロセスを起動させる時のJVMパラメータはstorm.yamlの「topology.worker.childopts」で指定可能です。  
-例えば、JVMサイズを拡張したい場合は下記のように設定値を記述すればOKです。  
-但し、「topology.worker.childopts」はSupervisorが起動した時に読み込んだ値を使用するため、更新した場合はSupervisorを再起動する必要があります。  
-
 Spout/Boltで例外が発生してcatchされなかった場合はWorkerプロセスごとフェールオーバーします。  
 Spout/Boltで例外が発生してユーザが開発したコード部でcatchされなかった場合は対象Spout/Boltのスレッドが停止します。  
 その結果、Workerプロセスごとフェールオーバーする形になります。  
@@ -17,7 +13,7 @@ Workerプロセスごとフェールオーバーする理由としてはNimbus�
 
 尚、上記の場合発生した例外の内容がStorm-UIに表示されます。  
 そのため、例外を投げる場合にはWorkerプロセスごとフェールオーバーすることを前提で投げる必要があります。  
-_但し、Storm0.8.2以降であればReportedFailedExceptionを投げればスレッドを停止させずにStorm-UIに情報を表示させることができる模様。_  
+__但し、Storm0.8.2以降であればReportedFailedExceptionを投げればスレッドを停止させずにStorm-UIに情報を表示させることができる模様。__  
 _上記の判定とStorm-UIに表示させている個所は特定できていません。_  
 _BoltExecutor系のクラスにおいてはログ出力を行ってはいるが、それだけしか記述されていないです。（要確認）_  
 
