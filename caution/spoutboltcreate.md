@@ -1,9 +1,9 @@
 ---
 layout: post
-title: SpoutBoltで使用できるAPI
+title: SpoutBolt作成時の注意点
 ---
 
-このページではSpoutBoltで使用できるAPIについてまとめます。
+このページではSpout/Bolt作成時に気をつける点などをまとめます。
 
 ### Task内部で自分が何番目のTaskかを知る方法
 * TopologyContext#getThisTaskId()＝Task全体での通し番号が取得できます。  

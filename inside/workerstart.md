@@ -15,13 +15,13 @@ SupervisorプロセスがWorkerプロセスを起動させる時のJVMパラメ�
 尚、「topology.worker.childopts」に"%ID%"という記述を含めた場合、Workerの使用するポート番号で置換されて実行されます。  
 そのため、下記のように値を指定しておけば各Workerプロセスを「26700、26701・・・」といったポートでリモートデバッグ待ち受けした状態で起動させることが可能です。  
 
-##### Workerリモートデバッグ用設定
+#### Workerリモートデバッグ用設定
 
     topology.worker.childopts: "-Xmx768m -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=2%ID%,suspend=n"
 
 尚、上記起動処理のソースコードは下記です。
 
-##### supervisor.clj(Storm-0.8.2)
+#### supervisor.clj(Storm-0.8.2)
 
     (defmethod launch-worker
         :distributed [supervisor storm-id port worker-id]
