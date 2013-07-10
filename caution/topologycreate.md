@@ -55,5 +55,6 @@ SupervisorのWorkerスロットが足りない場合、Topologyは確保でき�
 
 Topologyが動作するWorkerプロセスで使用可能なクラスはSupervisorが読んだJarとTopologyのJarに含まれるクラスのみです。  
 そのため、Topologyで追加のライブラリを使用する場合は下記の２つのいずれかを取る必要があります。  
+
 * Supervisorのライブラリとして追加のライブラリを配置する。_（Supervisorへのライブラリ追加はSupervisorを再起動しないと反映されないので注意！）_
 * TopologyのJarファイルに依存ライブラリも含める（maven-assembly-pluginのjar-with-dependenciesオプションなどで可能です。）

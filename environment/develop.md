@@ -10,7 +10,9 @@ Stormを用いたシステムはJava6以上がインストールされた環境�
 開発と、StormLocalClusterの動作が可能。
 
 ## OSごとの制限
+
 ### Windows
+
 * StormLocalClusterを動作させた際に疑似ZooKeeper（Stormプロセスの中で動作する、StormLocalClusterの動作を管理するコンポーネント）用のファイル削除に失敗する。
 そのため、終了時などに下記の例外が発生するケースがある。  
 発生した場合StormLocalClusterを実行するたびに1回あたり64MB程のゴミファイルが一時ディレクトリに残る。  
