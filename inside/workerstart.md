@@ -5,7 +5,7 @@ title: Worker起動時の動作
 
 このページではWorkerプロセス起動時の動作をまとめています。
 
-## Workerプロセスを起動させる際のJVMパラメータ設定方法
+### Workerプロセスを起動させる際のJVMパラメータ設定方法
 SupervisorプロセスがWorkerプロセスを起動させる時のJVMパラメータはstorm.yamlの「topology.worker.childopts」で指定可能です。  
 例えば、JVMサイズを拡張したい場合は下記のように設定値を記述すればOKです。  
 但し、「topology.worker.childopts」はSupervisorが起動した時に読み込んだ値を使用するため、更新した場合はSupervisorを再起動する必要があります。  

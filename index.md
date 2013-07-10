@@ -35,6 +35,7 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 * [Supervisor起動時の動作]
 * [Worker起動時の動作](/inside/workerstart.html)
 * [ヘルスチェックの動作]
+* [Spout/Boltの動作](/inside/spoutbolt.html)
 
 ## Stormを利用する際に気をつけること
 * [環境周りの注意点]
