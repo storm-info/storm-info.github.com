@@ -33,6 +33,7 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 * [Nimbus起動時の動作]
 * [TopologySubmit時の動作]
 * [Supervisor起動時の動作]
+* [Worker起動時の動作](/inside/workerstart.html)
 * [ヘルスチェックの動作]
 
 ## Stormを利用する際に気をつけること

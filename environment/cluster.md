@@ -19,7 +19,8 @@ title: クラスタ環境
       at org.zeromq.ZMQ.<clinit>(ZMQ.java:34)
 
 ### ZeroMQ、JZMQの最新版を導入した場合動作しない
-* ZeroMQ、JZMQはバージョンごとに内部動作やAPIの差分がある。そのため、Stormのページに書かれたバージョンを使用する必要があります。
+ZeroMQ、JZMQはバージョンごとに内部動作やAPIの差分があります。  
+そのため、Stormのページに書かれたバージョンを使用する必要があります。  
 違うバージョンを入れると下記のようなエラーが発生します。  
 尚、StormではZeroMQを使用せずに純粋なJavaプロセスとして動作させることも検討ポイントに入っています。  
 
@@ -31,7 +32,7 @@ title: クラスタ環境
       at backtype.storm.daemon.worker $fn__3066$exec_fn__858__auto____3067$this__3077$iter__3080__3084$fn__3085.invoke(worker.clj: 137)
       at clojure.lang.LazySeq.sval(LazySeq.java:42)
 
-* 32bitと64bitでインストールするものを誤った場合のエラー
+##### 32bitと64bitでインストールするものを誤った場合のエラー
 
     java.lang.UnsatisfiedLinkError: /usr/lib/libjzmq.so.0.0.0: /usr/lib/libjzmq.so.0.0.0: wrong ELF class: ELFCLASS32 (Possible cause: architecture word width mismatch)
       at java.lang.ClassLoader$NativeLibrary.load(Native Method)
@@ -54,7 +55,7 @@ Stormの構成プロセスであるNimbus、Supervisor、workerは環境変数�
 ### Storm-UIの起動ポート番号を変更する方法
 Storm-UIのポート番号はデフォルト8080だが、ui.port: 1234・・・という形でstorm.yamlを下記のように設定すれば変更可能です。  
 そのためTomcat等8080ポートを良く使うサービスが起動しているサーバでも使用することが可能です。  
-```
-ui.port: 1234
-```
+
+    ui.port: 1234
+
 
