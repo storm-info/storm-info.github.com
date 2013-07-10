@@ -159,9 +159,9 @@ aside a.button {
 
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #222;
+  color: #000000;
   margin-bottom: 30px;
-  font-size: 13px;
+  font-size: 9px;
 }
 
 code {
