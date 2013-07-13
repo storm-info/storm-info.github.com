@@ -19,11 +19,11 @@ title: TopologySubmit時の動作
         * storm jarコマンドを使用した場合はその際に指定したJarファイルが使用される。
     * 2-5.Topology起動情報をNimbusのThriftインタフェースを用いて投入する
         * 投入するのは以下の5個
-        *A.Topology名称
-        *B.TopologyJarファイルパス
-        *C.JSON形式の設定値
-        *D.StormTopology（TopologyBuilderで生成したTopology定義）
-        *E.Topology起動オプション（指定時のみ）
+        * A.Topology名称
+        * B.TopologyJarファイルパス
+        * C.JSON形式の設定値
+        * D.StormTopology（TopologyBuilderで生成したTopology定義）
+        * E.Topology起動オプション（指定時のみ）
         * StormTopologyにSpout/Boltが含まれているため、起動プログラムで設定した値が保持される。
 
 ### TopologySubmit時の動作（Nimbus）
