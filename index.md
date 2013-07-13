@@ -31,7 +31,7 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 
 ## Stormの内部動作
 * [Nimbus起動時の動作]
-* [TopologySubmit時の動作]
+* [TopologySubmit時の動作](/inside/topologysubmit.html)
 * [Supervisor起動時の動作]
 * [Worker起動時の動作](/inside/workerstart.html)
 * [ヘルスチェックの動作]
