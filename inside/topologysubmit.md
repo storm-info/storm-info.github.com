@@ -3,7 +3,8 @@ layout: post
 title: TopologySubmit時の動作
 ---
 
-このページではTopologySubmit時の動作をまとめています。
+このページではTopologySubmit時の動作をまとめています。  
+一部の詳細処理は現在確認中です。
 
 ### TopologySubmit時の動作（クライアント）
 * 1.Topology起動プログラムを起動する
