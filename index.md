@@ -38,9 +38,10 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 * [Spout/Boltの動作](/inside/spoutbolt.html)
 
 ## Stormを利用する際に気をつけること
-* [環境周りの注意点]
+* [環境周りの注意点](/caution/environment.html)
 * [Topology作成時の注意点](/caution/topologycreate.html)
 * [SpoutBolt作成時の注意点](/caution/spoutboltcreate.html)
+* [性能周りの注意点](/caution/performance.html)
 * [その他の注意点](/caution/others.html)
 
 ## Stormトラブルシューティング
