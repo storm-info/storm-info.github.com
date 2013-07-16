@@ -60,3 +60,23 @@ Stormは標準出力をサブプロセスと通信を行うために使用して
 但し、Topologyを生成する際のプログラムについてはこの制限から除外されます。その時点ではまだ親プロセス／サブプロセスに分割されていないためです。  
 StormクラスタにTopologySubmitに失敗したケースなど、標準出力を使った方がわかりやすいケースもあります。
 
+### Ack/Fail機構を使用するにはSpoutでemitする際にMessageIdを指定する必要がある
+Stormの売りでもあるメッセージの処理保証機構であるAck/Fail機構は以下のコード例のようにSpoutからTupleをemitする際にMessageIdを指定した場合のみ有効となる。  
+指定しない場合はメッセージの処理失敗／タイムアウト等の障害は検知されない。
+
+##### SpoutでTupleをemitする際にMessageIdを指定する例
+
+        private SpoutOutputCollector collector;
+        （中略）
+        collector.emit(tuple, messageId); // emitメッセージの第２引数としてmessageIdを指定
+
+
+### Ack/Failを使用する場合、次のBoltにemitしてからackを返す
+途中のBoltで単にTupleをackしてしまうとその時点でSpoutにackが返り、最後のBoltまで処理されたかどうかはわからなくなるためです。  
+そのため、途中のBoltでは、下記の順で処理を行う必要があります。  
+1.受信Tupleをanchorとして次Bolt向けのTupleをemit
+2.受信Tupleに対してackする
+
+### Spoutのfailが呼ばれるのはタイムアウトするか、明示的にBolt側でfailメソッドを呼び出した場合。
+タイムアウトのケースはまだ処理が正常に続いている場合でもfailが呼ばれてタイムアウト扱いになります。そのため、タイムアウトの時間はTopologyのメッセージ処理時間と相談して決めること。
+
