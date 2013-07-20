@@ -45,7 +45,7 @@ StormはシンプルなAPIでさまざまなプログラミング言語から利
 * [その他の注意点](/caution/others.html)
 
 ## Stormコード例／リンク
-* [Topologyコード例](/example/topologycode.html)
+* [Topologyコード例](/example/topology.html)
 * [Spoutコード例](/example/spout.html)
 * [Boltコード例](/example/bolt.html)
 
