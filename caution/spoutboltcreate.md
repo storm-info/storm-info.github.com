@@ -85,3 +85,9 @@ Stormの売りでもあるメッセージの処理保証機構であるAck/Fail�
 ２回チェックされた結果、連続で処理待ちとして残っていたTupleがタイムアウトとして扱われます。  
 そのため、タイムアウトは「topology.message.timeout.secs」の１倍より大きく、２倍未満の時間で発生する形になります。
 
+### Spoutで付与するmessageidはStorm内部の管理でのみ使用されるので、タプルのAPIで取得できるidとは違う
+Tuple#getMessageId()メソッドで取得できるMessageIdはSpoutでTupleをemitする際に指定したMessageIdとは異なります。そのため、Tuple emit時のMessageIdを後で使用したい場合はTupleの値としてMessageIdをつめておく必要があります。
+
+
+
+
