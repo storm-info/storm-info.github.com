@@ -5,6 +5,9 @@ title: 環境周りの注意点
 
 このページではStormを利用する際に環境周りで注意が必要な点をまとめます。
 
+### StormのNimbus、UI、Supervisorにはデフォルトでは終了コマンドはない
+そのため、[Storm-Installer](https://github.com/acromusashi/storm-installer)のようにラッピングしたコマンドを作成するか、killコマンドで落とすしかありません。
+
 ### Stormクラスタ自体のアップデートを確実に行う手順
 * 1.動作中のTopologyを全て終了させる
 * 2.storm-nimbus、storm-ui、storm-supervisorを終了させる
