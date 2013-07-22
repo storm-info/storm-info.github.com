@@ -88,6 +88,16 @@ Stormの売りでもあるメッセージの処理保証機構であるAck/Fail�
 ### Spoutで付与するmessageidはStorm内部の管理でのみ使用されるので、タプルのAPIで取得できるidとは違う
 Tuple#getMessageId()メソッドで取得できるMessageIdはSpoutでTupleをemitする際に指定したMessageIdとは異なります。そのため、Tuple emit時のMessageIdを後で使用したい場合はTupleの値としてMessageIdをつめておく必要があります。
 
+### 時間がかかる処理には各々タイムアウトが発生するよう実装する必要がある
+Spout/BoltのnextTuple/executeメソッド中で例外が発生した場合は検知可能ですが、何かしらの原因で処理が終了しないケースにおいては検知できません。そのため、時間がかかる処理についてはタイムアウトが発生するようにSpout/Boltを実装する必要があります。  
+尚、Spout/BoltのnextTuple/executeメソッドを実行するスレッドとHeartBeatを行うスレッドは独立して動作していますので、HeartBeatで異常を検知することもできません。
+
+### Grouping設定時の動作
+FieldsGroupingを設定した場合、指定したフィールドのハッシュ値を用いてBoltへの配分が行われます。  
+ShuffleGroupingを設定した場合、ラウンドロビン方式でBoltへの配分が行われます。
+
+### 1インスタンスに対するnextTuple/executeメソッドはシングルスレッドから実行される
+SpoutのnextTupleメソッド、Boltのexecuteメソッドは１インスタンスにつき１スレッドでしか実行されません。そのため、SpoutのnextTupleメソッド、Boltのexecuteメソッドの中で行う処理はマルチスレッドで実行されることを考慮する必要はありません。
 
 
 
